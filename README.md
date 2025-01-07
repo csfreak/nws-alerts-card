@@ -107,7 +107,7 @@ info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this 
 ```
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/custom-cards/nws-alerts-card.svg?style=for-the-badge
-[commits]: https://github.com/custom-cards/nws-alerts-card/commits/master
+[commits]: https://github.com/custom-cards/nws-alerts-card/commits/main
 [devcontainer]: https://code.visualstudio.com/docs/remote/containers
 [discord]: https://discord.gg/5e9yvq
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg?style=for-the-badge
