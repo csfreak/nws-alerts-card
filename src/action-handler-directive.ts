@@ -20,7 +20,7 @@ declare global {
   }
 }
 
-class ActionHandler extends HTMLElement implements ActionHandler {
+class NWSAlertsActionHandler extends HTMLElement implements ActionHandler {
   public holdTime = 500;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -162,27 +162,27 @@ class ActionHandler extends HTMLElement implements ActionHandler {
   }
 }
 
-// TODO You need to replace all instances of "action-handler-boilerplate" with "action-handler-<your card name>"
-customElements.define('action-handler-boilerplate', ActionHandler);
+// TODO You need to replace all instances of "action-handler-nws-alerts" with "action-handler-<your card name>"
+customElements.define('action-handler-nws-alerts', NWSAlertsActionHandler);
 
 const getActionHandler = (): ActionHandler => {
   const body = document.body;
-  if (body.querySelector('action-handler-boilerplate')) {
-    return body.querySelector('action-handler-boilerplate') as ActionHandler;
+  if (body.querySelector('action-handler-nws-alerts')) {
+    return body.querySelector('action-handler-nws-alerts') as ActionHandler;
   }
 
-  const actionhandler = document.createElement('action-handler-boilerplate');
-  body.appendChild(actionhandler);
+  const _actionHandler = document.createElement('action-handler-nws-alerts');
+  body.appendChild(_actionHandler);
 
-  return actionhandler as ActionHandler;
+  return _actionHandler as ActionHandler;
 };
 
 export const actionHandlerBind = (element: ActionHandlerElement, options?: ActionHandlerOptions): void => {
-  const actionhandler: ActionHandler = getActionHandler();
-  if (!actionhandler) {
+  const _actionHandler: ActionHandler = getActionHandler();
+  if (!_actionHandler) {
     return;
   }
-  actionhandler.bind(element, options);
+  _actionHandler.bind(element, options);
 };
 
 export const actionHandler = directive(
